@@ -23,8 +23,11 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    [IndescribableAPI searchList:@{@"sites": @"nico"} completion:^{
-    }];
+    [IndescribableAPI searchList:nil
+                      completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                          NSLog(@"%@", data);
+                      }];
+    
 }
 
 @end
