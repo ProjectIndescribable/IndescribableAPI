@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  IndescribableAPI
 //
 //  Created by 啟倫 陳 on 2014/5/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "IndescribableAPI.h"
+
+@interface MainViewController : UIViewController
 
 @end
