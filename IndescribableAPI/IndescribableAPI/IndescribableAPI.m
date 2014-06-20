@@ -12,7 +12,7 @@
 
 @implementation IndescribableAPI
 
-+(void) searchList : (NSDictionary*) parameter completion : (void(^)(NSURLResponse *response, NSData *data, NSError *connectionError)) completion {
++(void) searchList : (NSDictionary*) parameter completion : (void(^)(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError)) completion {
     
     get(@"http://api.neko.maid.tw/artwork.json",
          params(parameter),

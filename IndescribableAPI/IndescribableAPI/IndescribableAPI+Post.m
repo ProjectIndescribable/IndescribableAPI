@@ -12,7 +12,7 @@
 
 #pragma mark - public function
 
-void get(NSString* urlString, NSString* params, void(^completion)(NSURLResponse *response, NSData *data, NSError *connectionError)) {
+void get(NSString* urlString, NSString* params, void(^completion)(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError)) {
     
     NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", urlString, params]];
     
@@ -21,7 +21,14 @@ void get(NSString* urlString, NSString* params, void(^completion)(NSURLResponse 
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
-                           completionHandler:completion];
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               completion(response,
+                                          [NSJSONSerialization JSONObjectWithData:data
+                                                                          options:NSJSONReadingMutableContainers
+                                                                            error:nil],
+                                          connectionError);
+                           }];
+    
 }
 
 NSString* params(NSDictionary* parameter) {

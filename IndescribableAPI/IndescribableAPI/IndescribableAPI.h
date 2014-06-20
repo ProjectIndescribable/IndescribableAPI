@@ -39,6 +39,6 @@
  每頁列出幾筆，如未設定時預設為每頁讀取50筆資料
  
  */
-+(void) searchList : (NSDictionary*) parameter completion : (void(^)(NSURLResponse *response, NSData *data, NSError *connectionError)) completion;
++(void) searchList : (NSDictionary*) parameter completion : (void(^)(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError)) completion;
 
 @end

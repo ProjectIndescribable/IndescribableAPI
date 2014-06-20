@@ -10,7 +10,7 @@
 
 @interface IndescribableAPI (Post)
 
-void get(NSString* urlString, NSString* params, void(^completion)(NSURLResponse *response, NSData *data, NSError *connectionError));
+void get(NSString* urlString, NSString* params, void(^completion)(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError));
 NSString* params(NSDictionary* parameter);
 
 @end

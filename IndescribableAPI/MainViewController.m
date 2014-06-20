@@ -24,8 +24,8 @@
     [super viewDidLoad];
     
     [IndescribableAPI searchList:nil
-                      completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                          NSLog(@"%@", data);
+                      completion:^(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError) {
+                          NSLog(@"%@, %@", response, resultJson);
                       }];
     
 }
