@@ -22,7 +22,7 @@
 		0199DC7B1924595C00D82CE3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0199DC791924595C00D82CE3 /* MainViewController.m */; };
 		0199DC7C1924595C00D82CE3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0199DC7A1924595C00D82CE3 /* MainViewController.xib */; };
 		0199DC8019245B2700D82CE3 /* IndescribableAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0199DC7F19245B2700D82CE3 /* IndescribableAPI.m */; };
-		0199DC8319245DF700D82CE3 /* IndescribableAPI+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 0199DC8219245DF700D82CE3 /* IndescribableAPI+Post.m */; };
+		01B9A7AC1A52996B00993BCF /* IndescribableAPIRequestMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B9A7AB1A52996B00993BCF /* IndescribableAPIRequestMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		0199DC7A1924595C00D82CE3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0199DC7E19245B2700D82CE3 /* IndescribableAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndescribableAPI.h; path = IndescribableAPI/IndescribableAPI.h; sourceTree = "<group>"; };
 		0199DC7F19245B2700D82CE3 /* IndescribableAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndescribableAPI.m; path = IndescribableAPI/IndescribableAPI.m; sourceTree = "<group>"; };
-		0199DC8119245DF700D82CE3 /* IndescribableAPI+Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "IndescribableAPI+Post.h"; path = "IndescribableAPI/IndescribableAPI+Post.h"; sourceTree = "<group>"; };
-		0199DC8219245DF700D82CE3 /* IndescribableAPI+Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "IndescribableAPI+Post.m"; path = "IndescribableAPI/IndescribableAPI+Post.m"; sourceTree = "<group>"; };
+		01B9A7AA1A52996B00993BCF /* IndescribableAPIRequestMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndescribableAPIRequestMaker.h; path = IndescribableAPI/IndescribableAPIRequestMaker.h; sourceTree = "<group>"; };
+		01B9A7AB1A52996B00993BCF /* IndescribableAPIRequestMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndescribableAPIRequestMaker.m; path = IndescribableAPI/IndescribableAPIRequestMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,8 @@
 			children = (
 				0199DC7E19245B2700D82CE3 /* IndescribableAPI.h */,
 				0199DC7F19245B2700D82CE3 /* IndescribableAPI.m */,
-				0199DC8119245DF700D82CE3 /* IndescribableAPI+Post.h */,
-				0199DC8219245DF700D82CE3 /* IndescribableAPI+Post.m */,
+				01B9A7AA1A52996B00993BCF /* IndescribableAPIRequestMaker.h */,
+				01B9A7AB1A52996B00993BCF /* IndescribableAPIRequestMaker.m */,
 			);
 			name = IndescribableAPI;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				0199DC7B1924595C00D82CE3 /* MainViewController.m in Sources */,
 				0199DC8019245B2700D82CE3 /* IndescribableAPI.m in Sources */,
 				0199DC501924592C00D82CE3 /* main.m in Sources */,
-				0199DC8319245DF700D82CE3 /* IndescribableAPI+Post.m in Sources */,
+				01B9A7AC1A52996B00993BCF /* IndescribableAPIRequestMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +468,7 @@
 				0199DC741924592C00D82CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0199DC751924592C00D82CE3 /* Build configuration list for PBXNativeTarget "IndescribableAPITests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +477,7 @@
 				0199DC771924592C00D82CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,20 +14,22 @@
 
 @implementation MainViewController
 
--(void) didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - life cycle
 
--(void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    [IndescribableAPI searchList:nil
-                      completion:^(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError) {
-                          NSLog(@"%@, %@", response, resultJson);
-                      }];
+    [IndescribableAPI artworksByParameter:nil completion:^(IndescribableAPIStatus status, NSDictionary *jsonResult) {
+        if (status) {
+            NSLog(@"%@", jsonResult);
+        }
+    }];
     
+    /*[IndescribableAPI retrieveByParameter:@{@"site": @"pixiv", @"artwork_id": @"44196985"} completion:^(IndescribableAPIStatus status, NSDictionary *resultJson) {
+        if (status) {
+            NSLog(@"%@", resultJson);
+        }
+    }];*/
 }
 
 @end

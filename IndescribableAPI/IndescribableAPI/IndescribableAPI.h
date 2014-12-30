@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    IndescribableAPIStatusFail,
+    IndescribableAPIStatusSuccess
+} IndescribableAPIStatus;
+
 @interface IndescribableAPI : NSObject
 
 //難以名狀網站圖片內容
 /*
  parameter 選填種類
  
- - sites 
+ - sites
  網站來源：需為以下幾個字串中之一
  pixiv, nico, tinami
  
@@ -39,6 +44,20 @@
  每頁列出幾筆，如未設定時預設為每頁讀取50筆資料
  
  */
-+(void) searchList : (NSDictionary*) parameter completion : (void(^)(NSURLResponse *response, NSDictionary *resultJson, NSError *connectionError)) completion;
++ (void)artworksByParameter:(NSDictionary *)parameter completion:(void (^)(IndescribableAPIStatus status, NSDictionary *jsonResult))completion;
+
+//請求抓取圖片
+/*
+ 
+ site 為網站來源, 需為以下幾個字串中之一
+ - pixiv
+ - nico
+ - tinami
+ 
+ artwork_id 為該作品的 id
+ 
+ 這兩個皆為必填
+ */
++ (void)retrieveByParameter:(NSDictionary *)parameter completion:(void (^)(IndescribableAPIStatus status, NSDictionary *jsonResult))completion;
 
 @end
